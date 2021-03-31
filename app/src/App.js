@@ -1,25 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React from 'react'
+import { connect } from 'react-redux'
 
-function App() {
+import NASA from './components/NASA.js'
+import { getSpaceStuff } from './actions'
+
+function App(props) {
+
+  const handleGetData = e => {
+    e.preventDefault();
+    props.getSpaceStuff();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={handleGetData}>Rover Images</button>
+      <NASA />
     </div>
   );
 }
 
-export default App;
+export default connect(() => {return{}},{getSpaceStuff})(App);

@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/binding_dark.png');
+  color:beige;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.App {
+  width: 95vw;
+  margin: 20px auto;
+}
+
+.nasa-cont {
+  margin:auto;
+  width: 90vw;
+}
+
+.nasa-img {
+  display: inline-block;
+  width: 90%;
+  margin:auto;
+  border-radius: 7px;
 }
