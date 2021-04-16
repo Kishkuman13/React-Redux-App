@@ -15,7 +15,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <button onClick={handleGetData}>Rover Images</button>
+      <button onClick={handleGetData}>Fetch Rover Images</button>
       <NASA />
     </div>
   );
